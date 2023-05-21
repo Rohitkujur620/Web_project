@@ -1,0 +1,469 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+
+}
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 38px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+.btn:hover{
+    background: #3a1c0b;
+}
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
+
+}
+.categories{
+    margin: 70px 0;
+
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+    height: 300px;
+
+}
+.smallcontainer{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 25px;
+}
+.col-4{
+    flex-basis: 25%;
+    padding:10px ;
+    min-width: 200px;
+    margin-bottom: 50px;
+
+}
+.col-4 img{
+    width: 100% ;
+    height: 300px;
+    width: 300px;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative ;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+    content: "";
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+.col-4:hover{
+    transform: translateY(-7px);
+}
+/* testimonial */
+.testimonial{
+    padding-top: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+
+
+}
+.testimonial .col-3 img{
+    width: 100px;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+.col-3 p{
+    font-size: 16px;
+    margin: 12px 0;
+    color: #777;
+}
+.footer{
+    background: black;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px; 
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+.footer-col-1,.footer-col-2{
+    text-align: center;
+    font-size: 18px;
+}
+.footer ul{
+    list-style-type: none;
+
+}
+
+/* second page all products */
+
+.page-btn{
+    margin: 0 auto 80px;
+
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left: 10px;
+    width: 48px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+
+}
+.page-btn span:hover{
+    background: #ff523b;
+    color: #fff;
+}
+/* *************************navbar**************************** */
+.navbar_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.logo img{
+    width: 156px;
+    height: 110px;
+    /* border: 2px solid red; */
+    /* margin-bottom: -4px; */
+}
+.login a{
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+    margin-right: 20px;
+    padding: 0px 10px;
+    height: 70px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.login img{
+    width: 66px;
+    height: 63px;
+    border-radius: 100px;
+    margin-right: 5px;
+}
+@media screen and (max-width:680px) {
+    .login{
+        flex-direction: column; 
+    }
+    .logo img{
+        width: 100px;
+        height: 73px;
+    }
+    .logo p{
+        width: 100px;
+    }
+    .logo{
+        font-size: 1rem;
+    }
+    .login img{
+        width: 50px;
+        height: 50px;
+    }
+    .navbar_top{
+        padding: 6px 0px;
+    }
+}
+#dropdown{
+    width: 30px;
+    margin-left: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: none;
+}
+#dropdown hr{
+    margin-top: 5px;
+}
+#dropdown hr:first-child{
+    margin-top: 0px;
+}
+#dropdown:hover{
+    cursor: pointer;
+}
+.navbar{
+    z-index: 2;
+    display: flex;
+    background-color: #08070f;
+    align-items: center;
+    justify-content: space-between;
+}
+#rightnav{
+    display: flex;
+    margin-right: 20px;
+}
+#rightnav a{
+    display: flex;
+    align-items: centre;
+    justify-content: center;
+}
+#rightnav a p{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#rightnav img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin-right: 4px;
+}
+
+#rightnav p{
+    color: white;
+}
+.navbar a{
+    text-decoration: none;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+.navbar ul li{
+    list-style: none;
+    margin-left: 70px;
+    padding: 10px 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.navbar ul li:hover{
+    border-bottom: 2px solid white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.navbar ul li hr{
+    display: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    border-radius: 20px;
+}
+#First_child_navbar{
+    margin-left: 35px;
+}
+
+@media screen and (max-width: 964px) {
+    .navbar ul li{
+        margin-left: 50px;
+    }
+    .navbar ul li a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 863px) {
+    .navbar ul li{
+        margin-left: 30px;
+    }
+    .navbar ul li a{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 720px){
+    .navbar{
+        position: sticky;
+        top: 0px;
+        left: 0px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .navbar ul{
+        display: none;
+    }
+    #dropdown{
+        display: block;
+    }
+    nav{
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        background-color: white;
+        z-index: 2;
+    }
+    .navbar{
+        position: sticky;
+        top: 85px;
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 764px){
+    .navbar ul li{
+        margin-left: 19px;
+    }
+}
+
+/* *************************navbar**************************** */
+
+/* ********************************** side bar ***************************** */
+#sidebar{
+    background-color: #08070f;
+    width: 300px;
+    height: 85vh;
+    padding-top: 40px;
+    position: fixed;
+    top: 135px;
+    left: 0px;
+    z-index: 1;
+    display: none;
+}
+#sidebar img{
+    width: 92px;
+    height: 66px;
+}
+#sidebar ul li{
+    list-style: none;
+    /* border: 2px solid yellow; */
+    padding: 5px 50px;
+    margin: 10px 0px;
+}
+#sidebar ul li a{
+    text-decoration: none;
+    color: white;
+}
+#last a{
+    /* display: flex; */
+    align-items: center;
+}
+
+/* ********************************** side bar ***************************** */
+
+/* single_product */
+.small-container-single-product{
+    margin: 80px;
+
+}
+.small-container-single-product .col-2 img{
+    padding: 0;
+
+}
+.small-container-single-product .col-2{
+    padding: 20px;
+}
+.small-container-single-product h3{
+    font-size: 25px;
+}
+.small-container-single-product h4{
+    font-size: 20px;
+}
+.small-container-single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.small-container-single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff523b;
+}
+input:focus{
+    outline: none;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 16% ;
+    cursor: pointer;
+}
+.last p{
+    padding: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold ;
+    font-size: 25px;
+    border: 5px solid rgb(209, 240, 138);
+    border-radius: 50px;
+}
+.last p:hover{
+    transform: translateY(-10px);
+    
+}

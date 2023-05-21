@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Membership.css">
+    <title>Netaji Subhas Sports Complex | Buy Page</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar_top">
+            <div class="logo">
+                <img src="./img/logo.png" alt="">
+                <p>Netaji Shubhas Sports Complex</p>
+            </div>
+            <div class="login">
+                <a href="../Membership/Membership.html">
+                    <img src="./img/login_logo.png" alt="">
+                    <p>Membership</p>
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="navbar">
+        <div id="dropdown">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <ul>
+            <li id="First_child_navbar"><a href="../Home/home.html">Home</a></li>
+            <li><a href="../About Us/About Us.html">About Us</a></li>
+            <li><a href="../Home/contactUs.html">Contact Us</a></li>
+            <li><a href="../Facilities/facilities.html">Facilities</a></li>
+            <li><a href="../Photo Gallery/PhotoGallery.html">Photo Gallery</a></li>
+        </ul>
+        <a href="">
+            <ul id="rightnav">
+                <a href="../Store/STEP.html">
+                    <img src="https://cdn.dribbble.com/users/4843167/screenshots/14540242/dribbble-min_4x.jpg" alt="">
+                    <p>Store</p>
+                </a>
+                
+            </ul>
+        </a>
+    </div>
+    <div id="form">
+        <form action="buy6.php" method="post" enctype="multipart/form-data">
+            <div class="container">
+                <p>Name</p>
+                <input type="text" class="input_class" name="name" placeholder="Enter your name">
+            </div>
+            <div class="container">
+                <p>Phone Number</p>
+                <input type="text" class="input_class" name="phone_number" placeholder="Enter Phone Number">
+            </div>
+            <div class="container">
+                <p>Email ID to receive updates</p>
+                <input type="email" class="input_class" name="email" placeholder="Enter Email ID">
+            </div>
+            <div class="container">
+                <p>Delivery Address Line 1</p>
+                <textarea name="ad1" id="address1" cols="70" rows="5" placeholder="Enter address line 1"></textarea>
+            </div>
+            <div class="container">
+                <p>Delivery Address Line 2</p>
+                <textarea name="ad2" id="address2" cols="70" rows="5" placeholder="Enter address line 2"></textarea>
+            </div>
+            <div class="container">
+                <p>Name of product</p>
+                <select name="choices" id="options">
+                    <option value="default">--Select an option--</option>
+                    <option value="Red Printed T-Shirt">Red Printed T-Shirt</option>
+                    <option value="Bow and Arrow">Bow and Arrow</option>
+                    <option value="Table Tennis Table">Table Tennis Table</option>
+                    <option value="Yoga Mat">Yoga Mat</option>
+                    <option value="Dumbbells By Xiva">Dumbbells By Xiva</option>
+                    <option value="Cosco Run 1.0 Treadmill">Cosco Run 1.0 Treadmill</option>
+                    <option value="Telebrands Multi Gym Fat Blaster">Telebrands Multi Gym Fat Blaster</option>
+                    <option value="Blue Exercise Ball">Blue Exercise Ball</option>
+                    <option value="Football">Football</option>
+                    <option value="Cricket Gloves">Cricket Gloves</option>
+                    <option value="Tennis Racquet">Tennis Racquet</option>
+                    <option value="Basketball Ring">Basketball Ring</option>
+                    <option value="Neon Blue Printed Tank Top">Neon Blue Printed Tank Top</option>
+                    <option value="Jigsaw Men's Running Shoes">Jigsaw Men's Running Shoes</option>
+                    <option value="Knit Shorts - Red">Knit Shorts - Red</option>
+                    <option value="Aqua Cotton Yoga Wear With Sleeves">Aqua Cotton Yoga Wear With Sleeves</option>
+                </select>
+            </div>
+            <div class="container">
+                <p>Quantity</p>
+                <input type="number" name="quantity" id="qty" min="1" max="20">
+            </div>
+            <div class="container">
+                <p>Size</p>
+                <select name="size" id="size">
+                    <option value="default">-Select an option--</option>
+                    <option value="6.5">XS (6.5 - 6.9 inches)</option>
+                    <option value="6.9">S (6.9 - 7.5 inches)</option>
+                    <option value="7.9">M (7.9 - 8.7 inches)</option>
+                    <option value="9">L (9 - 9.4 inches)</option>
+                </select>
+            </div>
+            <button id="btn">Place Order</button>
+        </form>
+    </div>
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="../Home/home.html">Home</a></li>
+            <li><a href="../About Us/About Us.html">About US</a></li>
+            <li><a href="../Home/contactUs.html">Contact Us</a></li>
+            <li><a href="../Facilities/facilities.html">Facilities</a></li>
+            <li><a href="../Photo Gallery/PhotoGallery.html">Photo Gallery</a></li>
+            <li id="last">
+                <a href="">
+                    <a href="../Store/STEP.html">
+                        <img src="https://cdn.dribbble.com/users/4843167/screenshots/14540242/dribbble-min_4x.jpg" alt="">
+                        <p>Store</p>
+                    </a>
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ********** side bar ************* -->
+    <!-- ***************************** footer ******************************* -->
+    <footer>
+        <div class="find">
+            <div class="component" id="location">
+                <img src="https://media.istockphoto.com/vectors/location-icons-map-pointer-icon-map-navigation-location-red-location-vector-id1182752907?k=20&m=1182752907&s=170667a&w=0&h=EfHC35WQ6XUDbkHKNA9pggN5UP8FRQ_czvG7J6B6oOY="
+                    alt="">
+                <p>Azad Hind Fauj Marg, Dwarka Sector-3, Dwarka, New Delhi, Delhi 110078</p>
+            </div>
+            <div class="component" id="contact_no">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTknhKt1tF2mNuMXFoLr2g6aWUB3yrwNWRg&usqp=CAU">
+                <p>+91 8989898946</p>
+            </div>
+            <div class="component" id="email_id">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVDpsAVqo15QvfmFS_75YT1QIq8tJBkm2mJw&usqp=CAU"
+                    alt="">
+                <p>nsutdelhi@nsut.ac.in</p>
+            </div>
+        </div>
+        <p id="copy">&copy; All right reserved to Netaji Shubhas University of Technology</p>
+    </footer>
+    <!-- ***************************** footer ******************************* -->
+</body>
+<script>
+    // ************************** sidebar ****************************
+
+let dropdown = document.getElementById('dropdown');
+let sidebar = document.getElementById('sidebar');
+
+if(dropdown.style.display == "none"){
+    sidebar.style.display = "none"
+}
+
+dropdown.addEventListener('click', ()=>{
+    if(sidebar.style.display == "none"){
+        sidebar.style.display = "block";
+    } 
+    else{
+        sidebar.style.display = "none"
+    }
+})
+</script>
+</html>
