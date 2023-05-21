@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Fruktur', cursive;
+    }
+
+    /* *************************navbar**************************** */
+    .navbar_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    a p {
+        color: black;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .logo img {
+        width: 156px;
+        height: 110px;
+        /* border: 2px solid red; */
+        /* margin-bottom: -4px; */
+    }
+
+    .login a {
+        display: flex;
+        align-items: center;
+        /* border: 2px solid red; */
+        margin-right: 20px;
+        padding: 0px 10px;
+        height: 70px;
+    }
+
+    a {
+        color: black;
+    }
+
+    .login img {
+        width: 66px;
+        height: 63px;
+        border-radius: 100px;
+        margin-right: 5px;
+    }
+
+    @media screen and (max-width:680px) {
+        .login {
+            flex-direction: column;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 73px;
+        }
+
+        .logo p {
+            width: 100px;
+        }
+
+        .logo {
+            font-size: 1rem;
+        }
+
+        .login img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .navbar_top {
+            padding: 6px 0px;
+        }
+    }
+
+    #dropdown {
+        width: 30px;
+        margin-left: 35px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: none;
+    }
+
+    #dropdown hr {
+        margin-top: 5px;
+    }
+
+    #dropdown hr:first-child {
+        margin-top: 0px;
+    }
+
+    #dropdown:hover {
+        cursor: pointer;
+    }
+
+    .navbar {
+        z-index: 2;
+        display: flex;
+        background-color: #08070f;
+        align-items: center;
+        justify-content: space-between;
+        /* box-shadow: 1px 1px 100px white; */
+    }
+
+    #rightnav {
+        margin-right: 20px;
+    }
+
+    #rightnav {
+        display: flex;
+        align-items: centre;
+        justify-content: center;
+    }
+
+    #rightnav p {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    #rightnav img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        margin-right: 4px;
+    }
+
+    #rightnav p {
+        color: white;
+    }
+
+    .navbar a {
+        text-decoration: none;
+    }
+
+    .navbar ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        list-style: none;
+        margin-left: 70px;
+        padding: 10px 10px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+
+    .navbar ul li:hover {
+        border-bottom: 2px solid white;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .navbar ul li hr {
+        display: none;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: white;
+        border-radius: 20px;
+    }
+
+    #First_child_navbar {
+        margin-left: 35px;
+    }
+
+    @media screen and (max-width: 964px) {
+        .navbar ul li {
+            margin-left: 50px;
+        }
+
+        .navbar ul li a {
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 863px) {
+        .navbar ul li {
+            margin-left: 30px;
+        }
+
+        .navbar ul li a {
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (min-width: 720px) {
+        .navbar {
+            position: sticky;
+            top: 0px;
+            left: 0px;
+        }
+    }
+
+    @media screen and (max-width: 720px) {
+        .navbar ul {
+            display: none;
+        }
+
+        #dropdown {
+            display: block;
+        }
+
+        nav {
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            background-color: white;
+            z-index: 2;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 104px;
+            left: 0px;
+        }
+    }
+
+    @media screen and (max-width: 764px) {
+        .navbar ul li {
+            margin-left: 19px;
+        }
+    }
+
+    /* *************************navbar**************************** */
+
+    /* ************************** contact ************************** */
+    .contact-container {
+        /* border: 2px solid red; */
+        /* height: 100vh; */
+        background: linear-gradient(to left top, #e66465, #9198e5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('https://images.pexels.com/photos/598631/pexels-photo-598631.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 100px 0px;
+    }
+
+    .glass {
+        /* margin-left: 50px; */
+        box-shadow: 10px 10px 80px black;
+        /* height: 80vh; */
+        width: 70vw;
+        background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+        opacity: 0.8;
+        backdrop-filter: blur(1rem);
+        border-radius: 4px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        padding: 125px 0px;
+    }
+
+    .contact {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact p {
+        /* border: 2px solid red; */
+        text-align: center;
+        margin: 10px 10px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .inp {
+        width: 50%;
+        margin: auto;
+        height: 30px;
+        font-size: 1rem;
+        margin-top: 40px;
+        padding: 17px 8px;
+        border: none;
+        background: none;
+        border-bottom: 2px solid rgb(226, 223, 223);
+        color: white;
+    }
+
+    .inp::placeholder {
+        color: white;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: none;
+    }
+
+    .button {
+        display: flex;
+        /* border: 2px solid red; */
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        /* border: 2px solid red; */
+    }
+
+    .button button {
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 1rem;
+        border: none;
+        padding-bottom: 4px;
+    }
+
+    .button button:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 10px 10px 100px white;
+    }
+
+    @media screen and (max-width: 546px) {
+        .glass {
+            padding: 70px 0px;
+        }
+
+        .button {
+            flex-direction: column;
+            margin-top: 0px;
+            margin: auto;
+        }
+
+        .button button {
+            width: 180px;
+            margin-top: 20px;
+            margin-right: 0px;
+        }
+    }
+
+    /* ************************** contact ************************** */
+
+    /* ********************************** side bar ***************************** */
+    #sidebar {
+        background-color: #08070f;
+        width: 300px;
+        height: 85vh;
+        padding-top: 40px;
+        position: fixed;
+        top: 150px;
+        left: 0px;
+        z-index: 1;
+        display: none;
+    }
+
+    #sidebar img {
+        width: 92px;
+        height: 66px;
+    }
+
+    #sidebar ul li {
+        list-style: none;
+        /* border: 2px solid yellow; */
+        padding: 5px 50px;
+        margin: 10px 0px;
+    }
+
+    #sidebar ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    /* ********************************** side bar ***************************** */
+
+    /* ****************************** footer ******************************** */
+
+    footer {
+        width: 100%;
+        background-color: rgb(73, 112, 240);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 0px;
+        /* border: 2px solid red; */
+    }
+
+    .find img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .find {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        /* justify-content: center; */
+    }
+
+    .component {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 15px;
+    }
+
+    .component p {
+        text-align: center;
+        width: 200px;
+    }
+
+    #location p {
+        /* padding: 4px 10px; */
+        width: 250px;
+    }
+
+    #location {
+        border-right: 0.8px solid black;
+    }
+
+    #contact_no {
+        border-right: 0.8px solid black;
+    }
+
+    #contact_no p {
+        /* border: 2px solid red; */
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    @media screen and (max-width: 921px) {
+        .find {
+            flex-direction: column;
+            justify-content: left;
+        }
+
+        .component {
+            justify-content: left;
+            border-bottom: 0.8px solid black;
+            padding: 10px 20px;
+        }
+
+        #location {
+            border-right: none;
+            margin-bottom: 5px;
+        }
+
+        #contact_no {
+            border-right: none;
+            margin-bottom: 5px;
+        }
+    }
+
+    #copy {
+        margin: 50px 0px;
+        text-align: center;
+    }
+
+    /* ****************************** footer ******************************** */
+</style>
+
+<body>
+    <!-- **************************** navbar ************************* -->
+    <nav>
+        <div class="navbar_top">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="./img/logo.png" alt="">
+                </a>
+                <a href="home.html">
+                    <p>Netaji Shubhas Sports Complex</p>
+                </a>
+            </div>
+            <div class="login">
+                <a href="../Membership/Membership.html"><img src="./img/login_logo.png" alt="">
+                    <p>Membership</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="navbar">
+        <div id="dropdown">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <ul>
+            <li id="First_child_navbar"><a href="home.html">Home</a></li>
+            <li><a href="../About Us/About Us.html">About Us</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><a href="../Facilities/facilities.html">Facilities</a></li>
+            <li><a href="../Photo Gallery/PhotoGallery.html">Photo Gallery</a></li>
+        </ul>
+        <a id="rightnav" href="../Store/STEP.html">
+            <img src="https://cdn.dribbble.com/users/4843167/screenshots/14540242/dribbble-min_4x.jpg" alt="">
+            <p>Store</p>
+        </a>
+    </div>
+    <!-- **************************** navbar ********************************** -->
+
+    <!-- ******************************** contact page ******************************** -->
+    <div class="contact-container">
+        <div class="glass">
+            <form class="contact" action="contact.php" method="post">
+                <p>Contact Us!</p>
+                <input class="inp" type="text" name="name" id="name" placeholder="Enter Your Name">
+                <input class="inp" type="email" name="email" id="email" placeholder="Enter Your Email">
+                <input class="inp" type="text" name="message" id="message" placeholder="Enter Your Message here">
+                <div class="button">
+                    <button type="submit">submit</button>
+                    <button type="reset">reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ******************************** contact page ******************************** -->
+
+    <!-- **************************** side bar ************************************* -->
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="../Home/home.html">Home</a></li>
+            <li><a href="../About Us/About Us.html">About US</a></li>
+            <li><a href="../Home/contactUs.html">Contact Us</a></li>
+            <li><a href="../Facilities/facilities.html">Facilities</a></li>
+            <li><a href="../Photo Gallery/PhotoGallery.html">Photo Gallery</a></li>
+        </ul>
+    </div>
+
+    <!-- **************************** side bar ************************************* -->
+
+    <!-- ***************************** footer ******************************* -->
+    <footer>
+        <div class="find">
+            <div class="component" id="location">
+                <img src="https://media.istockphoto.com/vectors/location-icons-map-pointer-icon-map-navigation-location-red-location-vector-id1182752907?k=20&m=1182752907&s=170667a&w=0&h=EfHC35WQ6XUDbkHKNA9pggN5UP8FRQ_czvG7J6B6oOY="
+                    alt="">
+                <p>Azad Hind Fauj Marg, Dwarka Sector-3, Dwarka, New Delhi, Delhi 110078</p>
+            </div>
+            <div class="component" id="contact_no">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTknhKt1tF2mNuMXFoLr2g6aWUB3yrwNWRg&usqp=CAU">
+                <p>+91 8989898946</p>
+            </div>
+            <div class="component" id="email_id">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVDpsAVqo15QvfmFS_75YT1QIq8tJBkm2mJw&usqp=CAU"
+                    alt="">
+                <p>nsutdelhi@nsut.ac.in</p>
+            </div>
+        </div>
+        <p id="copy">&copy; All right reserved to Netaji Shubhas University of Technology</p>
+    </footer>
+    <!-- ***************************** footer ******************************* -->
+</body>
+
+<script>
+    let dropdown = document.getElementById('dropdown');
+    let sidebar = document.getElementById('sidebar');
+
+    if (dropdown.style.display == "none") {
+        sidebar.style.display = "none"
+    }
+
+    dropdown.addEventListener('click', () => {
+        if (sidebar.style.display == "none") {
+            sidebar.style.display = "block";
+        }
+        else {
+            sidebar.style.display = "none"
+        }
+    })
+</script>
+
+</html>
