@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.navbar_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.logo img{
+    width: 156px;
+    height: 110px;
+    /* border: 2px solid red; */
+    /* margin-bottom: -4px; */
+}
+.login a{
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+    margin-right: 20px;
+    padding: 0px 10px;
+    height: 70px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.login img{
+    width: 66px;
+    height: 63px;
+    border-radius: 100px;
+    margin-right: 5px;
+}
+@media screen and (max-width:680px) {
+    .login{
+        flex-direction: column; 
+    }
+    .logo img{
+        width: 100px;
+        height: 73px;
+    }
+    .logo p{
+        width: 100px;
+    }
+    .logo{
+        font-size: 1rem;
+    }
+    .login img{
+        width: 50px;
+        height: 50px;
+    }
+    .navbar_top{
+        padding: 6px 0px;
+    }
+}
+#dropdown{
+    width: 30px;
+    margin-left: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: none;
+}
+#dropdown hr{
+    margin-top: 5px;
+}
+#dropdown hr:first-child{
+    margin-top: 0px;
+}
+#dropdown:hover{
+    cursor: pointer;
+}
+.navbar{
+    z-index: 2;
+    display: flex;
+    background-color: #08070f;
+    align-items: center;
+    justify-content: space-between;
+}
+#rightnav{
+    margin-right: 20px;
+}
+#rightnav a{
+    display: flex;
+    align-items: centre;
+    justify-content: center;
+}
+#rightnav a p{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#rightnav img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin-right: 4px;
+}
+
+#rightnav p{
+    color: white;
+}
+.navbar a{
+    text-decoration: none;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+.navbar ul li{
+    list-style: none;
+    margin-left: 70px;
+    padding: 10px 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.navbar ul li:hover{
+    border-bottom: 2px solid white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.navbar ul li hr{
+    display: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    border-radius: 20px;
+}
+#First_child_navbar{
+    margin-left: 35px;
+}
+
+@media screen and (max-width: 964px) {
+    .navbar ul li{
+        margin-left: 50px;
+    }
+    .navbar ul li a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 863px) {
+    .navbar ul li{
+        margin-left: 30px;
+    }
+    .navbar ul li a{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 720px){
+    .navbar{
+        position: sticky;
+        top: 0px;
+        left: 0px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .navbar ul{
+        display: none;
+    }
+    #dropdown{
+        display: block;
+    }
+    nav{
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        background-color: white;
+        z-index: 2;
+    }
+    .navbar{
+        position: sticky;
+        top: 85px;
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 764px){
+    .navbar ul li{
+        margin-left: 19px;
+    }
+}
+
+form {
+    display: block;
+    margin: 20px 20px;
+    border: 2px dotted black;
+    backdrop-filter: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin: 12px 12px;
+}
+
+.container p {
+    margin: 5px 12px;
+}
+
+input, textarea {
+    border-radius: 5px;
+}
+
+.input_class, select {
+    width: 20%;
+    margin: 14px 12px; 
+    padding: 4px 9px;
+}
+
+.checkbox_inp {
+    margin: 14px;
+}
+
+textarea {
+    padding: 14px 12px;
+}
+
+#btn {
+    display: flex;
+    margin: 14px auto;
+    padding: 15px;
+}
+
+.files {
+    margin: 0 5px;
+    padding: 13px;
+}
+/* ************ side bar *********** */
+#sidebar{
+    background-color: #08070f;
+    width: 300px;
+    height: 85vh;
+    padding-top: 40px;
+    position: fixed;
+    top: 130px;
+    left: 0px;
+    z-index: 1;
+    display: none;
+}
+#sidebar img{
+    width: 92px;
+    height: 66px;
+}
+#sidebar ul li{
+    list-style: none;
+    /* border: 2px solid yellow; */
+    padding: 5px 50px;
+    margin: 10px 0px;
+}
+#sidebar ul li a{
+    text-decoration: none;
+    color: white;
+}
+#last a{
+    /* display: flex; */
+    align-items: center;
+}
+
+/* ************ side bar *********** */
+    /* ****************************** footer ******************************** */
+
+    footer {
+        width: 100%;
+        background-color: rgb(73, 112, 240);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 0px;
+        /* border: 2px solid red; */
+    }
+
+    .find img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .find {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        /* justify-content: center; */
+    }
+
+    .component {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 15px;
+    }
+
+    .component p {
+        text-align: center;
+        width: 200px;
+    }
+
+    #location p {
+        /* padding: 4px 10px; */
+        width: 250px;
+    }
+
+    #location {
+        border-right: 0.8px solid black;
+    }
+
+    #contact_no {
+        border-right: 0.8px solid black;
+    }
+
+    #contact_no p {
+        /* border: 2px solid red; */
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    @media screen and (max-width: 921px) {
+        .find {
+            flex-direction: column;
+            justify-content: left;
+        }
+
+        .component {
+            justify-content: left;
+            border-bottom: 0.8px solid black;
+            padding: 10px 20px;
+        }
+
+        #location {
+            border-right: none;
+            margin-bottom: 5px;
+        }
+
+        #contact_no {
+            border-right: none;
+            margin-bottom: 5px;
+        }
+    }
+
+    #copy {
+        margin: 50px 0px;
+        text-align: center;
+    }
+
+    /* ****************************** footer ******************************** */
