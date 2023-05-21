@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+    <title>Photo Gallery</title>
+    <style>
+        * {
+            margin: 0px 0px;
+            padding: 0px 0px;
+            font-family: 'Fruktur', cursive;
+        }
+
+        /* writing over image */
+        .box {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .box:hover .image {
+            opacity: 0.3;
+        }
+
+        .box:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: #04AA6D;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+
+        /* writing over image */
+        header {
+            height: 60vh;
+            width: 100%;
+            background-image: url("compressjpeg/camera-min.jpeg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container img {
+            height: 33vh;
+            width: 33vw;
+        }
+
+        .container table {
+            border: 2px solid palevioletred;
+            padding: 3px 3px;
+            margin: 2px 2px;
+        }
+
+        .container table td {
+            border: 2px solid palevioletred;
+            padding: 0px 0px;
+            margin: 0px 0px;
+        }
+
+        /* *************************navbar**************************** */
+        .navbar_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .logo img {
+            width: 156px;
+            height: 110px;
+            /* border: 2px solid red; */
+            /* margin-bottom: -4px; */
+        }
+
+        .login a {
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+            margin-right: 20px;
+            padding: 0px 10px;
+            height: 70px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .login img {
+            width: 66px;
+            height: 63px;
+            border-radius: 100px;
+            margin-right: 5px;
+        }
+
+        @media screen and (max-width:680px) {
+            .login {
+                flex-direction: column;
+            }
+
+            .logo img {
+                width: 100px;
+                height: 73px;
+            }
+
+            .logo p {
+                width: 100px;
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+
+            .login img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .navbar_top {
+                padding: 6px 0px;
+            }
+        }
+
+        #dropdown {
+            width: 30px;
+            margin-left: 35px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        #dropdown hr {
+            margin-top: 5px;
+        }
+
+        #dropdown hr:first-child {
+            margin-top: 0px;
+        }
+
+        #dropdown:hover {
+            cursor: pointer;
+        }
+
+        .navbar {
+            z-index: 2;
+            display: flex;
+            background-color: #08070f;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #rightnav {
+            margin-right: 20px;
+        }
+
+        #rightnav {
+            display: flex;
+            align-items: centre;
+            justify-content: center;
+        }
+
+        #rightnav p {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        #rightnav img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            margin-right: 4px;
+        }
+
+        #rightnav p {
+            color: white;
+        }
+
+        .navbar a {
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            margin-left: 70px;
+            padding: 10px 10px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        .navbar ul li:hover {
+            border-bottom: 2px solid white;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .navbar ul li hr {
+            display: none;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: white;
+            border-radius: 20px;
+        }
+
+        #First_child_navbar {
+            margin-left: 35px;
+        }
+
+        @media screen and (max-width: 964px) {
+            .navbar ul li {
+                margin-left: 50px;
+            }
+
+            .navbar ul li a {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 863px) {
+            .navbar ul li {
+                margin-left: 30px;
+            }
+
+            .navbar ul li a {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (min-width: 720px) {
+            .navbar {
+                position: sticky;
+                top: 0px;
+                left: 0px;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            .navbar ul {
+                display: none;
+            }
+
+            #dropdown {
+                display: block;
+            }
+
+            nav {
+                position: sticky;
+                top: 0px;
+                left: 0px;
+                background-color: white;
+                z-index: 2;
+            }
+
+            .navbar {
+                position: sticky;
+                top: 104px;
+                left: 0px;
+            }
+        }
+
+        @media screen and (max-width: 764px) {
+            .navbar ul li {
+                margin-left: 19px;
+            }
+        }
+
+        /* *************************navbar**************************** */
+
+        /* ********************************** side bar ***************************** */
+        #sidebar {
+            background-color: #08070f;
+            width: 300px;
+            height: 85vh;
+            padding-top: 40px;
+            position: fixed;
+            top: 150px;
+            left: 0px;
+            z-index: 1;
+            display: none;
+        }
+
+        #sidebar img {
+            width: 92px;
+            height: 66px;
+        }
+
+        #sidebar ul li {
+            list-style: none;
+            /* border: 2px solid yellow; */
+            padding: 5px 50px;
+            margin: 10px 0px;
+        }
+
+        #sidebar ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* ********************************** side bar ***************************** */
+        
+        /* ****************************** footer ******************************** */
+
+        footer {
+            width: 100%;
+            background-color: rgb(73, 112, 240);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 0px;
+            /* border: 2px solid red; */
+        }
+
+        .find img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .find {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            /* justify-content: center; */
+        }
+
+        .component {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 15px;
+        }
+
+        .component p {
+            text-align: center;
+            width: 200px;
+        }
+
+        #location p {
+            /* padding: 4px 10px; */
+            width: 250px;
+        }
+
+        #location {
+            border-right: 0.8px solid black;
+        }
+
+        #contact_no {
+            border-right: 0.8px solid black;
+        }
+
+        #contact_no p {
+            /* border: 2px solid red; */
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        @media screen and (max-width: 921px) {
+            .find {
+                flex-direction: column;
+                justify-content: left;
+            }
+
+            .component {
+                justify-content: left;
+                border-bottom: 0.8px solid black;
+                padding: 10px 20px;
+            }
+
+            #location {
+                border-right: none;
+                margin-bottom: 5px;
+            }
+
+            #contact_no {
+                border-right: none;
+                margin-bottom: 5px;
+            }
+        }
+
+        #copy {
+            margin: 50px 0px;
+            text-align: center;
+        }
+
+        /* ****************************** footer ******************************** */
+    </style>
+</head>
+
+<body>
+    <!-- **************************** navbar ************************* -->
+    <nav>
+        <div class="navbar_top">
+            <div class="logo">
+                <img src="./img/logo.png" alt="">
+                <p>Netaji Shubhas Sports Complex</p>
+            </div>
+            <div class="login">
+                <a href="../Membership/Membership.html">
+                    <img src="./img/login_logo.png" alt="">
+                    <p>Membership</p>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="navbar">
+        <div id="dropdown">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <ul>
+            <li id="First_child_navbar"><a href="../Home/home.html">Home</a></li>
+            <li><a href="../About Us/About Us.html">About Us</a></li>
+            <li><a href="../Home/contactUs.html">Contact Us</a></li>
+            <li><a href="../Facilities/facilities.html">Facilities</a></li>
+            <li><a href="../Photo Gallery/PhotoGallery.html">Photo Gallery</a></li>
+        </ul>
+        <a id="rightnav" href="../Store/STEP.html">
+            <img src="https://cdn.dribbble.com/users/4843167/screenshots/14540242/dribbble-min_4x.jpg" alt="">
+            <p>Store</p>
+            </ul>
+        </a>
+    </div>
+    <!-- **************************** navbar ********************************** -->
+    <header>
+        <!-- <img src="camera.jpeg" alt="Image Loading Failed."> -->
+    </header>
+    <hr>
+    <div class="container">
+        <table>
+            <tr>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Archery-min.jpeg" alt="Image Loading Failed"></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas Archery Club</h3>
+                            <p>Aim is to promote the archery game and help archers to improve their game and stay active
+                                in Archery.</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Basketball-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas Basketball Courts</h3>
+                            <p>16 Basketball courts across Delhi and Ncr.</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Fencing-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas Garden Fencing</h3>
+                            <p>2 Fencing courts</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Football-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas Football Clubs</h3>
+                            <p>12 huge Football Grounds</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Gymnastics-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas Gymnasium</h3>
+                            <p>3 Fully equipped Gymnasiums</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/GolfCourse-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas Golf clubs</h3>
+                            <p>2 Golf Clubs with amazing views</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/PingPong-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas TT Rooms</h3>
+                            <p>Several TT rooms in various places</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Skating-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas Skating Rinks</h3>
+                            <p>5 Skating Rinks equipped with appropriate safety measures</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Squash-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas squash courts</h3>
+                            <p>7 Squash courts across Delhi</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Tennis-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas Lawn Tennis Courts</h3>
+                            <p>3 clay courts , 4 grass courts and 2 artificial courts</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Treadmill-min.jpeg" alt="Image Loading Failed."></div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas Fitness Movement</h3>
+                            <p>33 Gyms spread across various locations in Delhi and NCR</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="box ">
+                    <div class="img_box"><img src="compressjpeg/Weightlifting-min.jpeg" alt="Image Loading Failed">
+                    </div>
+                    <div class="middle">
+                        <div class="text">
+                            <h3>Netaji Subhas PowerLifting Studio</h3>
+                            <p>17 Powerlifting places across various locations</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- **************************** side bar ************************************* -->
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="../Home/home.html">Home</a></li>
+            <li><a href="../About Us/About Us.html">About US</a></li>
+            <li><a href="../Home/contactUs.html">Contact Us</a></li>
+            <li><a href="../Facilities/facilities.html">Facilities</a></li>
+            <li><a href="../Photo Gallery/PhotoGallery.html">Photo Gallery</a></li>
+        </ul>
+    </div>
+
+    <!-- **************************** side bar ************************************* -->
+    <!-- ***************************** footer ******************************* -->
+    <footer>
+        <div class="find">
+            <div class="component" id="location">
+                <img src="https://media.istockphoto.com/vectors/location-icons-map-pointer-icon-map-navigation-location-red-location-vector-id1182752907?k=20&m=1182752907&s=170667a&w=0&h=EfHC35WQ6XUDbkHKNA9pggN5UP8FRQ_czvG7J6B6oOY="
+                    alt="">
+                <p>Azad Hind Fauj Marg, Dwarka Sector-3, Dwarka, New Delhi, Delhi 110078</p>
+            </div>
+            <div class="component" id="contact_no">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTknhKt1tF2mNuMXFoLr2g6aWUB3yrwNWRg&usqp=CAU">
+                <p>+91 8989898946</p>
+            </div>
+            <div class="component" id="email_id">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVDpsAVqo15QvfmFS_75YT1QIq8tJBkm2mJw&usqp=CAU"
+                    alt="">
+                <p>nsutdelhi@nsut.ac.in</p>
+            </div>
+        </div>
+        <p id="copy">&copy; All right reserved to Netaji Shubhas University of Technology</p>
+    </footer>
+    <!-- ***************************** footer ******************************* -->
+</body>
+<script>
+    // ************************** sidebar ****************************
+
+    let dropdown = document.getElementById('dropdown');
+    let sidebar = document.getElementById('sidebar');
+
+    if (dropdown.style.display == "none") {
+        sidebar.style.display = "none"
+    }
+
+    dropdown.addEventListener('click', () => {
+        if (sidebar.style.display == "none") {
+            sidebar.style.display = "block";
+        }
+        else {
+            sidebar.style.display = "none"
+        }
+    })
+</script>
+
+</html>
